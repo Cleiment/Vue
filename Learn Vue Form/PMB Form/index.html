@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PMB Siswa</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+</head>
+<body>
+    <br>
+    <div class="container" id="formPMB">
+        <h1>PMB</h1>
+        <hr>
+        <form ref='formMurid' @submit.prevent='submitForm($event)' action="http://localhost:8000/api/create_pmb" class="form" method="POST">
+            <p v-if="errors.length">
+                <b>Please correct the following error(s) : </b>
+                <ul>
+                    <li v-for="error in errors">{{ error }}</li>
+                </ul>
+            </p>
+            <div class="form-group row">
+                <label class="col-sm-2 col-form-label" for="nama">Nama</label>
+                <div class="col-sm-10">
+                    <input type="text" name="nama" id="nama" v-model="nama" class="form-control">
+                </div>
+            </div>
+            <div class="form-group row">
+                <label class="col-sm-2" for="jenis-kelamin">Jenis Kelamin </label>
+                <div class="col-sm-10">
+                    <div class="form-check">
+                        <input type="radio" v-model='jenis_kelamin' name="jenis_kelamin" id="jkl" value="laki-laki" class="form-check-input" checked> 
+                        <label class="form-check-label" for="jkl">Laki - Laki</label>
+                    </div>
+                    <div class="form-check">
+                        <input type="radio" v-model='jenis_kelamin' name="jenis_kelamin" id="jkp" value="perempuan" class="form-check-input"> 
+                        <label class="form-check-label" for="jkp">Perempuan</label>
+                    </div>
+                </div>
+            </div>
+            <div class="form-group row">
+                <label class="col-sm-2 col-form-label" for="alamat">Alamat</label>
+                <div class="col-sm-10">
+                    <textarea name="alamat" v-model='alamat' id="alamat" class="form-control"></textarea>
+                </div>
+            </div>
+            <div class="form-group row">
+                <label class="col-sm-2 col-form-label" for="no-telp">No Telp</label>
+                <div class="col-sm-10">
+                    <input type="text" v-model='no_telp' name="no_telp" id="no-telp" class="form-control">
+                </div>
+            </div>
+            <div class="form-group row">
+                <label class="col-sm-2 col-form-label" for="email">Email</label>
+                <div class="col-sm-10">
+                    <input type="email" v-model='email' name="email" id="email" class="form-control">
+                </div>
+            </div>
+            <div class="form-group row">
+                <label class="col-sm-2 col-form-label" for="password">Password</label>
+                <div class="col-sm-10">
+                    <input type="password" v-model='password' name="password" id="password" class="form-control">
+                </div>
+            </div>
+            <div class="form-group row">
+                <label class="col-sm-2 col-form-label" for="tempat-lahir">Tempat Lahir</label>
+                <div class="col-sm-10">
+                    <input type="text" v-model='tempat_lahir' name="tempat_lahir" id="tempat-lahir" class="form-control">
+                </div>
+            </div>
+            <div class="form-group row">
+                <label class="col-sm-2 col-form-label" for="tanggal-lahir">Tanggal Lahir</label>
+                <div class="col-sm-10">
+                    <input type="date" v-model='tanggal_lahir' name="tanggal_lahir" id="tanggal-lahir" class="form-control">
+                </div>
+            </div>
+            <div class="form-group row">
+                <label class="col-sm-2 col-form-label" for="asal-sekolah">Asal Sekolah</label>
+                <div class="col-sm-10">
+                    <input type="text" v-model='asal_sekolah' name="asal_sekolah" id="asal-sekolah" class="form-control">
+                </div>
+            </div>
+            <div class="form-group row">
+                <label class="col-sm-2 col-form-label" for="kota">Kota / Kabupaten</label>
+                <div class="col-sm-10">
+                    <select v-model='kota' name="kota" id="kota" class="form-control">
+                        <option v-for="kota in kotas" :value="kota.value">
+                            {{ kota.text }}
+                        </option>
+                    </select>
+                </div>
+            </div>
+            <div class="form-group row">
+                <label class="col-sm-2 col-form-label" for="jurusan">Jurusan</label>
+                <div class="col-sm-10">
+                    <select v-model='jurusan' name="jurusan" id="jurusan" class="form-control">
+                        <option v-for="jurusan in jurusans" :value="jurusan.value">
+                            {{ jurusan.text }}
+                        </option>
+                    </select>
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="col-4">
+                    <label class="col-form-label" for="ijazah">Ijazah</label>
+                    <input type="file" ref='ijazah' class="form-control" name="ijazah" id="ijazah" class="form-control">
+                </div>
+                <div class="col-4">
+                    <label class="col-form-label" for="sper">Surat Pernyataan</label>
+                    <input type="file" ref='surat' class="form-control" name="surat" id="sper" class="form-control">
+                </div>
+                <div class="col-4">
+                    <label class="col-form-label" for="rapor">Rapor</label>
+                    <input type="file" ref='rapor' class="form-control" name="rapor" id="rapor" class="form-control">
+                </div>
+            </div>
+            <br>
+            <div class="form-group">
+                <input type="submit" value="Submit" class="btn btn-primary form-control">
+            </div>
+        </form>
+    </div>
+    
+    <script src="https://unpkg.com/vue@next"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.21.1/axios.min.js" integrity="sha512-bZS47S7sPOxkjU/4Bt0zrhEtWx0y0CRkhEp8IckzK+ltifIIE9EMIMTuT/mEzoIMewUINruDBIR/jJnbguonqQ==" crossorigin="anonymous"></script>
+    <script src="main.js"></script>
+</body>
+</html>

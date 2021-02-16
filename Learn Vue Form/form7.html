@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form 7</title>
+</head>
+<style>
+    #form7{
+        text-align: center;
+    }
+    form{
+        border: 1px solid #ddd;
+        padding: 5px;
+        width: 225px;
+        background-color: #efefef;
+    }
+    label{
+        display: block;
+        margin-top: 5px;
+    }
+    input, textarea, select, option {
+        min-width: 200px;
+    }
+</style>
+<body>
+    <div id="form7">
+        <form ref="formBook" @submit.prevent='submitForm($event)' action="simpan.php" method="POST">
+            <p v-if="errors.length">
+                <b>Please correct the following error(s) : </b>
+                <ul>
+                    <li v-for="error in errors">{{ error }}</li>
+                </ul>
+            </p>
+            <label>Title : </label>
+            <input type="text" ref="title" name="title" v-model='title'>
+            <br>
+            <label>Description : </label>
+            <textarea ref="description" name="description" v-model="description"></textarea>
+            <br>
+            <label>Authors : </label>
+            <input type="text" ref="authors" name="authors" v-model='authors'>
+            <br>
+            <label>Price : </label>
+            <input type="text" ref="price" name="price" v-model.number='price'>
+            <br>
+            <label>Categories : </label>
+            <select ref="categories" name="categories" v-model="categories" multiple>
+                <option v-for="option in options" :value="option.value">
+                    {{ option.text }}
+                </option>
+            </select>
+            <br>
+            <label>Cover : </label>
+            <input type="file" name="cover" ref="cover">
+            <input type="submit" value="Submit">
+        </form>
+    </div>
+
+    <script src="https://unpkg.com/vue@next"></script>
+    <script src="main.js"></script>
+</body>
+</html>

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Vue</title>
+</head>
+<body>
+    <div id="form1">
+        <form>
+            <input type="text" name="nama" v-model="nama" placeholder="Masukkan Nama">
+            {{ nama }}
+            <br><br>
+
+            <textarea name="deskripsi" v-model="deskripsi" placeholder="Masukkan Deskripsi"></textarea>
+            {{ deskripsi }}
+            <br><br>
+
+            <input type="number" name="harga" v-model.number="harga">
+            {{ harga }}
+            <br>
+
+            <input type="text" name="judul" v-model.trim="judul" placeholder="Masukkan Judul"> 
+            "{{ judul }}"
+            <br>
+
+            Paket <br>
+            <input type="radio" name="bukuA" value="A" v-model="paket">
+            <label for="bukuA">Buku Laravel</label>
+            <br>
+
+            <input type="radio" name="bukuB" value="B" v-model="paket">
+            <label for="bukuB">Buku Vue</label>
+            <br>
+
+            <input type="radio" name="bukuAB" value="AB" v-model="paket">
+            <label for="bukuAB">Buku Laravel + Vue</label>
+            <br>
+            <span>Pilihan Paket: {{ paket }}</span>
+            <br>
+
+            Aktif: 
+            <input type="checkbox" name="checkbox" v-model="aktif">
+            <label for="checkbox">{{ aktif }}</label>
+            <br>
+
+            Hobi <br>
+            <input type="checkbox" name="hobby1" value="nonton" v-model="hobi">
+            <label for="hobby1">Nonton</label>
+            <input type="checkbox" name="hobby2" value="jalan" v-model="hobi">
+            <label for="hobby2">Jalan</label>
+            <input type="checkbox" name="hobby3" value="makan" v-model="hobi">
+            <label for="hobby3">Makan</label>
+            <br>
+            <span>Pilihan Hobi : {{ hobi }}</span>
+            <br>
+
+            <select v-model="categories" multiple>
+                <option value="01">Graphic Programming</option>
+                <option value="02">Mobile Application Development</option>
+                <option value="03">Virtual & Augmented Reality</option>
+            </select>
+            <span>Selected : {{ categories }}</span>
+            <br>
+
+            <select name="categories2" v-model="categories2" multiple>
+                <option v-for="option in options" :value="option.value">
+                    {{ option.text }}
+                </option>
+            </select>
+            <span>Selected : {{ categories2 }}</span>
+
+        </form>
+    </div>
+<script src="https://unpkg.com/vue@next"></script>
+<script src="../main.js"></script>
+</body>
+</html>

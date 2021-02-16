@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vue</title>
+
+    <style>
+        .card{
+            background: #efefef;
+            border: 1px solid #ddd;
+            margin-right: 5px;
+            padding: 5px;
+            width: 250px;
+            float: left;
+            /* text-align: center; */
+        }
+        h3{
+            min-height: 45px;
+        }
+        .fade-enter-active, .fade-leave-active{
+            transition: opacity .5s;
+        }
+        .fade-enter, .fade-leave-to{
+            opacity: 0;
+        }
+    </style>
+</head>
+<body>
+    <div id="counter">
+        Counter: {{ counter }}
+    </div>
+<br>
+    <div id="bind-attribute">
+        <span v-bind:title="message">
+            Hover your mouse over me for a few seconds to see my dynamically bound title!
+        </span>
+    </div>
+<br>
+    <div id="event-handling">
+        <p>{{ message }}</p>
+        <button @click="reverseMessage">Reverse Message</button>
+    </div>
+<br>
+    <div id="two-way-binding">
+        <p>{{ message }}</p>
+        <input v-model = 'message'>
+    </div>
+<br>
+    <div id="conditional-rendering">
+        <p v-if="seen">Now you see me</p>
+        <button @click="toggleSeen">Toggle Seen</button>
+    </div>
+<br>
+    <div id="list-rendering">
+        <ol>
+            <li v-for='todo in todos'>
+                <input v-model = 'todo.text'>
+                {{ todo.text }}
+            </li>
+        </ol>
+    </div>
+<br>
+    <div id="todo-list-app">
+        <ol>
+            <todo-item
+                v-for='item in groceryList'
+                v-bind:todo='item'
+                v-bind:key='item.id'
+            ></todo-item>
+        </ol>
+    </div>
+<br>
+    <!-- <div id="book-comp">
+        <book
+            v-for="book in books"
+            :key="book.id"
+            :book="book"
+        ></book>
+    </div> -->
+<hr>
+    <div id="book-comp-selected">
+        <h1>Selected : {{ selectedBook }}</h1>
+        <book
+            v-for="book in books"
+            :key="book.id"
+            :book="book"
+            @selected="selectedBook = $event"
+        ></book>
+    </div>
+<hr>
+    <div id="slot">
+        <information>
+            <p>Hati-hati lantai licin</p>
+        </information>
+    </div>
+<hr>
+    <div id="slots">
+        <information>
+            <template v-slot:judul>
+                <h1>Info Penting!</h1>
+            </template>
+            <template v-slot:isi>
+                <p>Waspada, Banyak Curanmor!</p>
+            </template>
+        </information>
+    </div>
+<br>
+    <div id="dobComp" style="display:block; margin-top: 150px">
+        <button @click="currentComponent = 'list'">List</button>
+        <button @click="currentComponent = 'detail'">Detail</button>
+        <hr>
+        <transition name="fade" mode="out-in">
+            <component :is="currentComponent"></component>
+        </transition>
+    </div>
+<br>
+    <div id="mixin">
+        <button @click="hello">Hello</button>
+    </div>
+</body>
+<script src="https://unpkg.com/vue@next"></script>
+<script type="module" src="vue.js"></script>
+</html>
