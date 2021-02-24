@@ -1,4 +1,4 @@
-export const BookData = {
+export const BooksComponent = {
     data(){
         return{
             books: [
@@ -41,5 +41,17 @@ export const BookData = {
             ],
             selectedBook: ''
         }
-    }
+    },
+    template: `
+        <div>
+            <h1>Daftar Buku</h1>
+            <ul>
+                <li v-for="book of books">
+                    <router-link :to="'/book/'+book.id">
+                        {{ book.title }}
+                    </router-link>
+                </li>
+            </ul>
+        </div>
+    `
 };

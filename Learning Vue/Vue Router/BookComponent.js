@@ -1,4 +1,4 @@
-export const BookData = {
+export const BookComponent = {
     data(){
         return{
             books: [
@@ -41,5 +41,21 @@ export const BookData = {
             ],
             selectedBook: ''
         }
-    }
+    },
+    computed: {
+        book(){
+            return this.books.filter((book) => {
+                return book.id == parseInt(this.$route.params.id)
+            })[0]
+        }
+    },
+    template: `
+    <div v-if="book">
+        <h1>Buku {{ book.title }}</h1>
+        <ul>
+            <li v-for="(num, value) of book">
+                {{ value + ' : ' + num }} <br>
+            </li>
+        </ul>
+    </div>`
 };

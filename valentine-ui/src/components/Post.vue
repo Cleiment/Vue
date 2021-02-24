@@ -29,7 +29,10 @@
             </div>
             <div class="comments-like">
                 <p style="float: right; margin-left: 5px; font-weight: 400;font-size: 16px;color: #8f8f8f;">1.7k</p>
+
                 <img @click="toggleLike()" :src="likeSource" alt="like" style="float: right; margin-left: 10px">
+                <!-- <img @click="toggleLike()" src="../assets/liked.svg" alt="like" style="float: right; margin-left: 10px"> -->
+
                 <p style="float: right; margin-left: 5px; font-weight: 400;font-size: 16px;color: #8f8f8f;">2</p>
                 <img src="../assets/comment-text.svg" alt="comments" style="float: right">
             </div>

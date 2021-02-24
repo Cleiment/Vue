@@ -64,7 +64,7 @@ img{
     top: 28px;
 }
 .backbutton{
-    left: 45px;
+    left: 20px;
     top: 35px;
 }
 .explore{
