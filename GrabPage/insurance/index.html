@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Grab, Decacom Pertama di Asia</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w==" crossorigin="anonymous" />
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div id="top">
+    <div style="display: flex;">
+      <i class="fa fa-bars bars menu-span" aria-hidden="true"></i>
+      <a class="navbar-brand bg-size-cover menu-logo" href="http://localhost:5500/GrabPage"></a>
+    </div>
+    <div class="right-side">
+      <p>Jadilah Mitra Kami</p>
+      <p>Pusat Bantuan</p>
+      <p>Bahasa Indonesia</p>
+      <a style="color: black">
+        <i class="fa fa-search"></i>
+      </a>
+    </div>
+  </div>
+  <div>
+    <div id="body-1" class="d-flex align-items-center align-content-center">
+      <div class="mt-container">
+        <h2 id="mt">Kebebasan untuk bera kapan pun kamu butuhkan</h2>
+      </div>
+    </div>
+    <div id="body-2" class="container">
+      <h4>{{ title }}</h4>
+      <p>{{ desc }}</p>
+    </div>
+    <div id="body-3">
+      <div class="container">
+        <h4 style="font-weight: 600;">Kenapa Berasuransi dengan Kami?</h4>
+        <div style="padding: 25px 0;" class="d-flex sm-cont align-items-center">
+          <img src="https://assets.grab.com/wp-content/uploads/sites/9/2020/05/19131414/icon_convenience.png" alt="">
+          <div class="d-flex flex-column">
+            <p style="margin-bottom: 15px;">Gampang dibeli langsung di aplikasi</p>
+            <small>Platform inovatif kami melindungimu kapan pun kamu butuh perlindungan.</small>
+          </div>
+        </div>
+        <div style="margin: 0 175px;">
+          <div style="border-top-style: solid;border-top-width: 1px;border-top-color: #f9f9f9;width: 100%;"></div>
+        </div>
+        <div style="padding: 25px 0;" class="d-flex sm-cont align-items-center">
+          <img src="https://assets.grab.com/wp-content/uploads/sites/9/2020/05/19131414/icon_affordable.png" alt="">
+          <div class="d-flex flex-column">
+            <p style="margin-bottom: 15px;">Dengan harga premi yang terjangkau</p>
+            <small>Harga kompetitif dengan cakupan komprehensif.</small>
+          </div>
+        </div>
+        <div style="margin: 0 175px;">
+          <div style="border-top-style: solid;border-top-width: 1px;border-top-color: #f9f9f9;width: 100%;"></div>
+        </div>
+        <div style="padding: 25px 0;" class="d-flex sm-cont align-items-center">
+          <img src="https://assets.grab.com/wp-content/uploads/sites/9/2020/05/19131418/icon_tailored.png" alt="">
+          <div class="d-flex flex-column">
+            <p style="margin-bottom: 15px;">Paket yang dirancang khusus untukmu</p>
+            <small>Pilih paket yang cocok dengan kebutuhan gaya hidupmu.</small>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="body-4">
+      <div class="container"></div>
+        <h4 style="font-weight: 600;margin-bottom: 76px;">Paket yang kami tawarkan</h4>
+        <div class="my-row">
+          <paket 
+            v-for="paket in pakets"
+            :paket="paket"
+          ></paket>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div id="footer">
+    <div id="footer-menu" class="container">
+      <div class="row">
+        <div class="d-flex flex-column col-3">
+          <img style="width: 85px; margin-bottom: 10px;" src="https://www.grab.com/id/wp-content/themes/grabsg/public/img/grab_logo_158.png" alt="">
+          <p style="font-weight: 600;margin-bottom: 25px;">Forward Together</p>
+          <small style="margin-bottom: 10px;">Follow us and keep updated!</small>
+          <div class="socmed">
+            <a target="_blank" href="https://www.facebook.com/grabid">
+              <i class="fa fa-facebook"></i>
+            </a>
+            <a target="_blank" href="https://www.instagram.com/grabid">
+              <i class="fa fa-instagram"></i>
+            </a>
+            <a target="_blank" href="https://www.twitter.com/grabid">
+              <i class="fa fa-twitter"></i>
+            </a>
+          </div>
+        </div>
+        <div class="row footer-links col-9">
+          <div class="col-md-2">
+            <p>Tentang Grab</p>
+            <ul>
+              <li>Cerita Grab</li>
+              <li>Lokasi</li>
+              <li>Tanggung Jawab & Keselamatan</li>
+              <li>Dampak Positif</li>
+              <li>Ruang Berita</li>
+              <li>Karir</li>
+            </ul>
+          </div>
+          <div class="col-md-2">
+            <p>Pengguna</p>
+            <ul>
+              <li>Yang Terbaru</li>
+              <li>Transportasi</li>
+              <li>GrabFood</li>
+              <li>GrabMart</li>
+              <li>GrabExpress</li>
+              <li>Pembayaran Grab</li>
+              <li>GrabRewards</li>
+              <li>Groceries</li>
+              <li>Paket Hemat</li>
+              <li>GrabKios</li>
+              <li>Paket Hemat</li>
+              <li>GrabKios</li>
+              <li>GrabGifts</li>
+              <li>Entertainment</li>
+            </ul>
+          </div>
+          <div class="col-md-2">
+            <p>Pengemudi</p>
+            <ul>
+              <li>Yang Terbaru</li>
+              <li>Transportasi</li>
+              <li>GrabFood</li>
+              <li>GrabExpress</li>
+              <li>Pusat Pengemudi</li>
+              <li>Kode Etik</li>
+            </ul>
+          </div>
+          <div class="col-md-2">
+            <p>Mitra Penjual</p>
+            <ul>
+              <li>GrabFood</li>
+              <li>GrabKios</li>
+              <li>GrabMart</li>
+            </ul>
+          </div>
+          <div class="col-md-2">
+            <p>Perusahaan</p>
+            <ul>
+              <li>Grab For Business</li>
+              <li>GrabAds</li>
+              <li>GrabGifts</li>
+              <li>Layanan Pengantaran untuk Bisnis</li>
+            </ul>
+          </div>
+          <div class="col-md-2">
+            <p>Tautan Langsung</p>
+            <ul>
+              <li>Pusat Bantuan</li>
+              <li>Menu Makanan</li>
+              <li>Informasi Covid-19</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="kopikanan" class="container-fluid">
+      <p>Peraturan dan Kebijakan . Kebijakan Privasi</p>
+      <p style="font-weight: 400; color: rgba(255, 255, 255, 0.6);">&copy; Grab 2021</p>
+      <div style="width: 350px;" class="d-flex justify-content-between">
+        <a  href="https://app.appsflyer.com/id647268330?pid=ID-Website-IOS-Install_Button&c=Website_Download" target="_blank">
+          <img style="width: 90%;" src="https://assets.grab.com/wp-content/uploads/sites/4/2019/09/19160631/01-app-store-btn.png" alt="">
+        </a>
+        <a href="https://app.appsflyer.com/com.grabtaxi.passenger?pid=ID-Website-ADR-Install_Button&c=Website_Download" target="_blank">
+          <img style="width: 90%;" src="https://assets.grab.com/wp-content/uploads/sites/4/2019/09/19160636/02-play-store-btn.png" alt="">
+        </a>
+      </div>
+    </div>
+  </div>
+  <script src="https://unpkg.com/vue@next"></script>
+  <script src="main.js"></script>
+</body>
+</html>

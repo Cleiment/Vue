@@ -1,0 +1,242 @@
+*{
+  font-family: 'Sanomat Grab Web', sans-serif;
+}
+
+#body-1{
+  /* background-color: rgb(0, 177, 79); */
+  background: url(https://assets.grab.com/wp-content/uploads/sites/4/2019/11/20125825/insure-homepage-banner.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 495px;
+  margin-top: 69px;
+  background-position: 90% center;
+}
+
+#body-2{
+  text-align: center;
+  padding: 50px 0 75px;
+}
+
+#body-2 > p{
+  font-weight: 500;
+}
+
+#body-3{
+  background: #00b140;
+  padding: 75px 0;
+  text-align: center;
+  color: white;
+}
+
+#body-4{
+  background-color: #d6d6d6;
+  padding: 75px 0;
+  text-align: center;
+  margin-bottom: -10px;
+}
+
+.paket-card{
+  background: white;
+  margin-bottom: 25px;
+  overflow:hidden;
+  height: 470px;
+}
+
+.paket-img{
+  height: 260px;
+  background-size: cover;
+  background-position: 50%;
+  transition-duration: 700ms;
+  will-change: transform;
+}
+
+.paket-img:hover{
+  transform: scale(1.2);
+}
+
+.my-row{
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.sm-cont{
+  margin: 0 315px;
+  text-align: left;
+}
+
+#top{
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background: rgba(255,255,255,0.9);
+  height: 69px;
+  padding: 0 174px;
+  display: flex;
+  justify-content: space-between;
+  z-index: 999;
+  border-bottom: 1px solid lightgrey;
+}
+
+.menu-span{
+  margin-top: 17px;
+  font-size: 32px;
+}
+
+.menu-logo{
+  width: 91px;
+  margin-left: 66px;
+  background-image: url(https://www.grab.com/id/wp-content/themes/grabsg/public/img/grab_logo_158.png);
+}
+
+.main-menu{
+  list-style: none;
+  display: flex;
+}
+
+.bg-size-cover{
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
+.right-side{
+  display: flex;
+  align-content: center;
+  align-items: center;
+  justify-content: space-around;
+  width: 454px;
+}
+
+p{
+  margin-bottom: 0;
+  font-weight: 600;
+}
+
+#mt{
+  text-shadow: 1px 1px 1px rgba(0,0,0,0.5);
+  font-size: 30px;
+  color: #00b140;
+  font-weight: 500 !important;
+  width: 674px;
+  text-align: left;
+}
+
+.mt-container{
+  margin: 0 150px;
+}
+
+.my-container{
+  padding-top: 160px;
+}
+
+#pm{
+  font-family: "Grab Community Inline", Sans-serif;
+  font-size: 29px;
+  line-height: 29px;
+  width: 275px;
+}
+
+#pmpm{
+  display: flex;
+  flex-direction: row;
+  color: white!important;
+}
+
+#pmp{
+  font-size: 18px;
+  width: 250px;
+}
+
+#pllp{
+  font-size: 56px;
+  color: white;
+  letter-spacing: -0.2px;
+  line-height: 64px;
+  font-weight: 600;
+}
+
+.cat-card{
+  background: white;
+  margin-bottom: 30px;
+  height: 450px;
+  padding: 0 15px;
+}
+
+.cat-card > .card-body > .card-title {
+  color: rgb(22, 26, 29);
+  font-size: 1.5rem;
+  margin-bottom: 12px;
+  font-weight: 400;
+}
+
+.cat-card > .card-body > .card-text {
+  color: #55595c;
+  font-size: 1.1rem;
+  font-weight: 400;
+  border-color: #55595c;
+}
+
+.cat-card > .card-body > img {
+  width: 100%;
+}
+
+#gta{
+  margin-top: 25px;
+}
+
+#footer{
+  background-color: #eaeff2;
+}
+
+#footer-menu{
+  padding: 50px 0 25px;
+}
+
+.fa.fa-facebook,
+.fa.fa-twitter,
+.fa.fa-instagram {
+ font-family:"Font Awesome 5 Brands";
+ font-weight:400
+}
+
+.socmed > a{
+  border-radius: 50%;
+  background-color: #363a45;
+  width: 25px;
+  height: 25px;
+  color: #fff;
+  float: left;
+  padding-left: 5.5px;
+  padding-top: 2px;
+  font-size: 12px;
+  margin-right: 5px;
+}
+
+ul{
+  list-style: none;
+}
+
+.footer-links > div > p{
+  margin-bottom: 15px;
+}
+
+.footer-links > div > ul{
+  padding: 0;
+}
+
+.footer-links > div > ul > li{
+  font-size: 4px!important;
+  line-height: 1.42857143;
+  padding: 4px 0;
+  line-height: 16px;
+}
+
+#kopikanan{
+  height: 85px;
+  background-color: rgb(54, 58, 69);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  align-content: center;
+  color: white;
+}

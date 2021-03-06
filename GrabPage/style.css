@@ -1,0 +1,192 @@
+*{
+  font-family: 'Sanomat Grab Web', sans-serif;
+}
+
+#body{
+  background-color: rgb(0, 177, 79);
+  height: 100%;
+  margin-top: 69px;
+  padding-bottom: 100px;
+}
+
+.cat-img-div{
+  display: flex;
+  justify-content: center;
+}
+
+.cat-img{
+  width: 250px;
+  transition-duration: 300ms;
+}
+
+.cat-img:hover{
+  transform: scale(1.2);
+}
+
+#top{
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background: rgba(255, 255, 255, 0.9);
+  height: 69px;
+  padding: 0 174px;
+  display: flex;
+  justify-content: space-between;
+  z-index: 999;
+}
+
+.menu-span{
+  margin-top: 17px;
+  font-size: 32px;
+}
+
+.menu-logo{
+  width: 91px;
+  margin-left: 66px;
+  background-image: url(https://www.grab.com/id/wp-content/themes/grabsg/public/img/grab_logo_158.png);
+}
+
+.main-menu{
+  list-style: none;
+  display: flex;
+}
+
+.bg-size-cover{
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
+.right-side{
+  display: flex;
+  align-content: center;
+  align-items: center;
+  justify-content: space-around;
+  width: 454px;
+}
+
+p{
+  margin-bottom: 0;
+  font-weight: 600;
+}
+
+#motto{
+  font-size: 80px;
+  color: white;
+  letter-spacing: -0.45px;
+  line-height: 1;
+  font-weight: 500;
+  width: 966px;
+}
+
+.my-container{
+  padding-top: 160px;
+}
+
+#pm{
+  font-family: "Grab Community Inline", Sans-serif;
+  font-size: 29px;
+  line-height: 29px;
+  width: 275px;
+}
+
+#pmpm{
+  display: flex;
+  flex-direction: row;
+  color: white!important;
+}
+
+#pmp{
+  font-size: 18px;
+  width: 250px;
+}
+
+#pllp{
+  font-size: 56px;
+  color: white;
+  letter-spacing: -0.2px;
+  line-height: 64px;
+  font-weight: 600;
+}
+
+.cat-card{
+  background: white;
+  margin-bottom: 30px;
+  height: 450px;
+  padding: 0 5px;
+}
+
+.cat-card > .card-body > .card-title {
+  color: rgb(22, 26, 29);
+  font-size: 1.5rem;
+  margin-bottom: 12px;
+  font-weight: 400;
+}
+
+.cat-card > .card-body > .card-text {
+  color: #55595c;
+  font-size: 1.1rem;
+  font-weight: 400;
+  border-color: #55595c;
+}
+
+#gta{
+  margin-top: 25px;
+}
+
+#footer{
+  background-color: #eaeff2;
+}
+
+#footer-menu{
+  padding: 50px 0 25px;
+}
+
+.fa.fa-facebook,
+.fa.fa-twitter,
+.fa.fa-instagram {
+ font-family:"Font Awesome 5 Brands";
+ font-weight:400
+}
+
+.socmed > a{
+  border-radius: 50%;
+  background-color: #363a45;
+  width: 25px;
+  height: 25px;
+  color: #fff;
+  float: left;
+  padding-left: 5.5px;
+  padding-top: 2px;
+  font-size: 12px;
+  margin-right: 5px;
+}
+
+ul{
+  list-style: none;
+}
+
+.footer-links > div > p{
+  margin-bottom: 15px;
+}
+
+.footer-links > div > ul{
+  padding: 0;
+}
+
+.footer-links > div > ul > li{
+  font-size: 4px!important;
+  line-height: 1.42857143;
+  padding: 4px 0;
+  line-height: 16px;
+}
+
+#kopikanan{
+  height: 85px;
+  background-color: rgb(54, 58, 69);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  align-content: center;
+  color: white;
+}
