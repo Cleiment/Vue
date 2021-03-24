@@ -42,11 +42,19 @@ export const BookComponent = {
             selectedBook: ''
         }
     },
+    props: ['id'],
     computed: {
         book(){
-            return this.books.filter((book) => {
-                return book.id == parseInt(this.$route.params.id)
-            })[0]
+            let book = this.books.filter((book) => {
+                return book.id == parseInt(this.id)
+            })
+
+            if(book.length == 0){
+                alert('Buku tidak ditemukan')
+                this.$router.push('/books')
+            }else{
+                return book[0]
+            }
         }
     },
     template: `
@@ -57,5 +65,13 @@ export const BookComponent = {
                 {{ value + ' : ' + num }} <br>
             </li>
         </ul>
-    </div>`
+    </div>`,
+    beforeRouteLeave (to, from, next){
+        const answer = window.confirm('Apakah anda yakin akan keluar?')
+        if (answer) {
+            next()
+        }else{
+            next(false)
+        }
+    }
 };

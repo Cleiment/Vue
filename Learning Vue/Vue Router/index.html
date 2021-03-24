@@ -15,6 +15,14 @@
         width: 250px;
         float: left;
     }
+
+    .fade-enter-active, .fade-leave-active{
+      transition: opacity .5s;
+    }
+
+    .fade-enter, .fade-leave-to{
+      opacity: 0;
+    }
   </style>
 </head>
 <body>
@@ -23,7 +31,11 @@
       <router-link to="/about">About</router-link>
       <router-link to="/books">Books</router-link>
       <hr>
-      <router-view></router-view>
+      <router-view v-slot="{ Component }">
+        <transition name="fade" mode="out-in">
+          <component :is="Component" />
+        </transition>
+      </router-view>
   </div>
 
   <script src="https://unpkg.com/vue@next"></script>

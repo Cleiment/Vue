@@ -45,13 +45,13 @@ export const BooksComponent = {
     template: `
         <div>
             <h1>Daftar Buku</h1>
-            <ul>
+            <ol>
                 <li v-for="book of books">
                     <router-link :to="'/book/'+book.id">
                         {{ book.title }}
                     </router-link>
                 </li>
-            </ul>
+            </ol>
         </div>
     `
 };
